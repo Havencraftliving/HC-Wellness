@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+/*
+  HC Wellness palette — Brand Guidelines V1, section 04 "Colour".
+  Earth: HavenCraft's palette, muted. Mostly Linen and Bark;
+  everything else earns its place.
+*/
+@theme {
+  /* Brand colours */
+  --color-linen: #ece3d3;
+  --color-bark: #2d2420;
+  --color-clay: #8a3a1a;
+  --color-ochre: #b58a45;
+  --color-cedar: #5c3f2c;
+  --color-slate-tile: #6f7d82;
+  --color-lake: #3f5f70;
+
+  /* Supporting tints (derived, for panels and muted text on Linen) */
+  --color-clay-reversed: #d07e58;
+  --color-parchment: #f6f0e3;
+  --color-bark-muted: #6e6054;
+
+  /* Semantic aliases */
+  --color-background: #ece3d3;
+  --color-foreground: #2d2420;
+  --color-muted: #6e6054;
+  --color-primary: #2d2420;
+  --color-accent: #8a3a1a;
+}
+
+@theme inline {
+  --font-heading: var(--font-inter-tight);
+  --font-subheading: var(--font-dm-mono);
+  --font-body: var(--font-inter-tight);
+  --font-sans: var(--font-inter-tight);
+  --font-mono: var(--font-dm-mono);
+}
+
+/*
+  Type scale — section 06 "Type".
+  Label: DM Mono 11 / +0.3em, uppercase. Eyebrows, buttons, nav.
+  Micro: DM Mono 10 / +0.55em, uppercase. FROM HAVENCRAFT, fine print.
+*/
+@utility type-label {
+  font-family: var(--font-dm-mono), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+@utility type-micro {
+  font-family: var(--font-dm-mono), ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 0.55em;
+  text-transform: uppercase;
+}
+
+/* Display: one per page. 56/60, ExtraLight. Sentence case. */
+@utility type-display {
+  font-family: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
+  font-size: 3.5rem;
+  line-height: 3.75rem;
+  font-weight: 200;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    background-color: #ece3d3;
+    color: var(--color-bark);
+    font-family: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+  }
+
+  /* Headlines: Inter Tight Light 300, never heavier than 400. */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+  }
+
+  button,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"] {
+    font-family: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
+  }
+}
